@@ -1,0 +1,195 @@
+.root {
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    -fx-font-size: 14px;
+    -fx-focus-color: #bdbdbd;
+    -fx-faint-focus-color: #eaeaea;
+}
+
+.split-pane, .vbox, .anchor-pane {
+    -fx-background-color: #ffffff;
+}
+
+/* BARRA DE ROLAGEM */
+.scroll-bar {
+    -fx-background-color: #eaeaea;
+    -fx-background-radius: 0;
+    -fx-opacity: 0.8;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #bdbdbd;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-effect: none;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #999999;
+}
+.scroll-bar .increment-button, .scroll-bar .decrement-button,
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+
+/* BOTÕES */
+.button {
+    -fx-background-color: #333333;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-border-width: 0;
+    -fx-effect: none;
+}
+.button:hover {
+    -fx-background-color: #000000;
+}
+.button:pressed {
+    -fx-background-color: #555555;
+}
+
+/* NOVO ESTILO: BOTÃO DE AJUDA "?" - Circular Perfeito e Pequeno */
+#glossarioButton {
+    /* Cores */
+    -fx-background-color: #333333;
+
+    /* Forma Circular e Tamanho */
+    -fx-min-width: 18px;
+    -fx-min-height: 18px;
+    -fx-pref-width: 18px;
+    -fx-pref-height: 18px;
+    -fx-border-radius: 50%; /* Círculo perfeito */
+    -fx-background-radius: 50%;
+
+    /* Visibilidade e Posição */
+    -fx-text-fill: white;
+    -fx-padding: 0;
+    -fx-alignment: center;
+    -fx-font-size: 12px;
+}
+#glossarioButton:hover {
+    -fx-background-color: #000000;
+}
+#glossarioButton:pressed {
+    -fx-background-color: #555555;
+}
+
+
+/* TEXT AREA */
+.text-area {
+    -fx-font-family: "Consolas", "Monaco", monospace;
+    -fx-font-size: 14px;
+    -fx-border-color: #bdbdbd;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-background-color: #ffffff;
+    -fx-highlight-fill: #eaeaea;
+    -fx-highlight-text-fill: #000000;
+}
+.text-area .content, .text-area .viewport {
+    -fx-background-color: #ffffff;
+}
+.text-area:focused {
+    -fx-border-color: -fx-focus-color;
+}
+
+
+/* TABELAS */
+.table-view {
+    -fx-border-color: #bdbdbd;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-effect: none;
+    -fx-background-color: #ffffff;
+    /* Remover padding/espaçamento extra da borda externa */
+    -fx-padding: 0;
+}
+
+.table-view .filler, .table-view .virtual-flow {
+    -fx-background-color: #ffffff;
+}
+
+/* CABEÇALHO - Cor Sólida do Botão (#333333) e Fonte Branca */
+.table-view .column-header-background {
+    -fx-background-color: #333333;
+    /* Borda em volta do cabeçalho */
+    -fx-border-width: 1px;
+    -fx-border-color: #bdbdbd;
+    -fx-effect: none;
+}
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #333333;
+    -fx-padding: 8px 0;
+}
+
+/* Fonte do Cabeçalho - Branca */
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Divisórias das Colunas (Cabeçalho) */
+.table-view .column-header .table-column {
+    -fx-border-color: #bdbdbd;
+    -fx-border-width: 0 1px 0 0;
+}
+.table-view .column-header .table-column {
+    -fx-border-width: 0;
+}
+
+/* Linhas de Dados (Zebrado) */
+.table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-cell-size: 30px;
+    -fx-border-width: 0;
+}
+.table-row-cell:odd {
+    -fx-background-color: #f7f7f7;
+}
+
+/* CÉLULAS DA TABELA - APENAS BORDA VERTICAL */
+.table-cell {
+    -fx-border-width: 0 1px 0 0;
+    -fx-border-color: #eaeaea;
+    -fx-padding: 0 5px;
+}
+.table-row-cell .table-cell {
+    -fx-border-width: 0;
+}
+
+/* COR DE SELEÇÃO DA LINHA */
+.table-row-cell:selected {
+    -fx-background-color: #bdbdbd;
+    -fx-text-fill: #000000;
+}
+.table-row-cell:selected .table-cell {
+    -fx-border-color: #bdbdbd;
+}
+
+
+/* LABELS E TÍTULOS */
+.label {
+    -fx-padding: 5px 0 0 0;
+    -fx-text-fill: #333333;
+}
+
+#statusLabel {
+    -fx-font-style: italic;
+    -fx-padding: 8px 0 0 0;
+}
+
+/* SPLIT PANE (Divisória) - AGORA MAIS VISÍVEL E FÁCIL DE PEGAR */
+#mainSplitPane > .split-pane-divider {
+    -fx-background-color: #eaeaea; /* Fundo cinza claro */
+    -fx-padding: 2px; /* Aumenta a altura visual do divisor */
+    -fx-border-width: 0; /* Remove a borda fina, confiando no padding */
+    -fx-cursor: s-resize; /* Cursor ajustado para row-resize */
+}
