@@ -97,12 +97,3 @@ Observação: em projetos sem módulos (non-modular), o parâmetro `--add-module
 
 - macOS / Linux:
   --module-path "/home/usuario/javafx-sdk-XX/lib" --add-modules=javafx.controls,javafx.fxml
-
----
-
-Se quiser, posso:
-- Escrever comandos exatos substituindo o nome da sua classe principal se você me disser qual é.
-- Gerar um script de execução (run.sh / run.bat) para o projeto que já inclua o caminho para o JavaFX (você indicaria onde extraiu o SDK).
-- Ajudar a converter o projeto para usar Maven/Gradle para gerenciar automaticamente o JavaFX.
-
-Bom desenvolvimento!
